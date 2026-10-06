@@ -18,6 +18,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.framework_design.Base.WebFactory;
 
 
 public class Report_generation implements ITestListener {
@@ -73,8 +74,12 @@ public class Report_generation implements ITestListener {
 		test.log(Status.FAIL, "Test fail");
 		test.log(Status.FAIL, result.getThrowable().getMessage());
 
-		ITestContext context = result.getTestContext();
-	       driver = (WebDriver)context.getAttribute("driver");
+		WebDriver driver=WebFactory.getDriver();
+		
+		System.out.println(
+			    "LISTENER DRIVER = " + WebFactory.getDriver() +
+			    " | THREAD = " + Thread.currentThread().getId()
+			);
 	       
 	           File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 

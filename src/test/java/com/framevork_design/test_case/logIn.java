@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.framevork_design.POM.LogIN;
 import com.framevork_design.Utilities.Excel_Utility;
+import com.framework_design.Base.Base_Class;
 
 public class logIn extends Base_Class {
 	LogIN l1;
@@ -22,7 +23,7 @@ public class logIn extends Base_Class {
 	@DataProvider(name="Test_data")
 	public String[][]LogIn_Data() throws IOException
 	{
-		String path="D:\\Selenium material\\Selenium project\\framevork_design\\Test_Data\\LogIN_Data.xlsx";
+		String path=System.getProperty("user.dir")+"/src/test/resources/LogIn_Data.xlsx";
 		Excel_Utility e1=new Excel_Utility(path);
 		
 		int rownum=e1.getRowCount("Sheet1");

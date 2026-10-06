@@ -5,7 +5,7 @@
 <listeners>
 <listener class-name="com.framevork_design.Utilities.Report_generation"/>
 </listeners>
-<parameter name="browser" value="Chrome"/>
+<parameter name="browser" value="chrome"/>
   <test thread-count="5" name="cross-browser">
   <classes>
  <!-- <class name="com.framevork_design.test_case.open_url"/>--> 
