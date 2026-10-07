@@ -52,11 +52,10 @@ public class WebFactory {
 
 	    WebDriver driver = threaddriver.get();
 	    
-	   
-
 	    if (driver != null) {
 	        driver.quit();
 	        threaddriver.remove();
 	    }
+	    
 	}
 }
