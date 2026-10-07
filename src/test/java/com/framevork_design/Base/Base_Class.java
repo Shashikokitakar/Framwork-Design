@@ -1,4 +1,4 @@
-package com.framework_design.Base;
+package com.framevork_design.Base;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
