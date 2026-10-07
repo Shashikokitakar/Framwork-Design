@@ -18,7 +18,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.framework_design.Base.WebFactory;
+import com.framevork_design.Base.WebFactory;
 
 
 public class Report_generation implements ITestListener {
