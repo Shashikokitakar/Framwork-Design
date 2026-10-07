@@ -52,10 +52,7 @@ public class WebFactory {
 
 	    WebDriver driver = threaddriver.get();
 	    
-	    System.out.println(
-	    	    "QUIT DRIVER = " + driver +
-	    	    " | THREAD = " + Thread.currentThread().getId()
-	    	);
+	   
 
 	    if (driver != null) {
 	        driver.quit();
