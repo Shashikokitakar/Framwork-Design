@@ -18,7 +18,29 @@ public class logIn extends Base_Class {
 	{
 		l1=new LogIN(driver);
 		
-		l1.LogIn(UserName, Password);
+		l1.Enter_UserNAme(UserName);
+		
+		l1.Enter_Password(Password);
+		
+		l1.Click_LogIn_Button();
+		
+		String Actual_Url=driver.getCurrentUrl();
+		
+		String Expected_Url="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
+		
+		boolean flag=false;
+		
+		if(Actual_Url.contentEquals(Expected_Url))
+		{
+			flag=true;
+			System.out.println("Valid Credentials");
+		}
+		
+		else
+		{
+			System.out.println("InValid Credentials");
+		}
+		
 	}
 	
 	@DataProvider(name="Test_data")

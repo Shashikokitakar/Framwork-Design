@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.framevork_design.test_case.logIn">
+      <class name="com.framevork_design.test_case.open_url">
         <methods>
-          <include name="LogIN_Test"/>
-          <include name="TearDown"/>
           <include name="Setup"/>
+          <include name="TearDown"/>
+          <include name="check_url"/>
         </methods>
-      </class> <!-- com.framevork_design.test_case.logIn -->
+      </class> <!-- com.framevork_design.test_case.open_url -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

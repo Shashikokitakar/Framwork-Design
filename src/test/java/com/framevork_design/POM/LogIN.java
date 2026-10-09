@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.framevork_design.Utilities.Synchronization;
+
 public class LogIN {
 
 	WebDriver driver;
@@ -16,46 +18,42 @@ public class LogIN {
 	
 	//Locating Username TextField
 	@FindBy(name="username")
-	WebElement UserName;
+	private WebElement UserName;
 	
 	//Locating Password Text FIeld
 	@FindBy(name="password")
-	WebElement Password;
+	private WebElement Password;
 	
 	//Locating LogIN Button
 	@FindBy(xpath="//*[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")
-	WebElement Login_button;
+	private WebElement Login_button;
 	
 	//Locating User Message for Invalid credentials
 	@FindBy(xpath="//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]")
-	WebElement Error_Message;
+	private WebElement Error_Message;
 	
 	//Method for Login
-	public void LogIn(String Name, String password)
+	public void Enter_UserNAme(String Name)
 	{
-		UserName.sendKeys(Name);
+		Synchronization.VisibilityofElement(UserName);
+	     UserName.sendKeys(Name);
+	     
+	}
+	     
+	public void Enter_Password(String password)
+	{
+		Synchronization.VisibilityofElement(Password);
 		
 		Password.sendKeys(password);
-		
+	}
+	
+	public void Click_LogIn_Button()
+	{
+		Synchronization.ClickElement(Login_button);
 		Login_button.click();
-		
-		String Actual_Url=driver.getCurrentUrl();
-		
-		String Expected_Url="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
-		
-		boolean flag=false;
-		
-		if(Actual_Url.contentEquals(Expected_Url))
-		{
-			flag=true;
-			System.out.println("Valid Credentials");
-		}
-		
-		else
-		{
-			System.out.println("InValid Credentials");
-		}
-		
+	}
+
+
 		
 	}
-}
+

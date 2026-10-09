@@ -9,9 +9,9 @@
     <classes>
       <class name="com.framevork_design.test_case.logIn">
         <methods>
-          <include name="LogIN_Test" invocation-numbers="0 1 2 3 4"/>
-          <include name="TearDown"/>
+          <include name="LogIN_Test" invocation-numbers="0"/>
           <include name="Setup"/>
+          <include name="TearDown"/>
         </methods>
       </class> <!-- com.framevork_design.test_case.logIn -->
     </classes>
