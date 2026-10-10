@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<suite name="Suite" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="com.framevork_design.Utilities.Annotation_Transformer" />
+		<listener class-name="com.framevork_design.Utilities.Report_generation" />
 
-<suite name="Suite">
-<listeners>
-<listener class-name="com.framevork_design.Utilities.Report_generation"/>
-</listeners>
-<parameter name="browser" value="chrome"/>
-  <test thread-count="5" name="cross-browser">
-  <classes>
- <!-- <class name="com.framevork_design.test_case.open_url"/>--> 
-  <class name="com.framevork_design.test_case.logIn"/>
-  </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	</listeners>
+
+	<test parallel="classes" thread-count="5" name="chrome-browser">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.framevork_design.test_case.open_url" />
+			<class name="com.framevork_design.test_case.logIn" />
+		</classes>
+	</test> 
+
+	<test parallel="classes" thread-count="5" name="firefox-browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.framevork_design.test_case.open_url" />
+			<class name="com.framevork_design.test_case.logIn" />
+		</classes>
+	</test>
+</suite> 
