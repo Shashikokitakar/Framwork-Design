@@ -20,13 +20,12 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.framevork_design.Base.WebFactory;
 
-
 public class Report_generation implements ITestListener {
 
 	public ExtentSparkReporter spark;
 	public ExtentReports extent;
 	public ExtentTest test;
-	WebDriver driver=null;
+	WebDriver driver = null;
 	String repname;
 
 	public void onStart(ITestContext context) {
@@ -47,7 +46,7 @@ public class Report_generation implements ITestListener {
 
 		extent.attachReporter(spark);
 		extent.setSystemInfo("Application", "Pet_Store");
-		//================================================================
+		// ================================================================
 		extent.setSystemInfo("Operating System", System.getProperty("os.name"));
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("User", "Shashikant");
@@ -74,27 +73,10 @@ public class Report_generation implements ITestListener {
 		test.assignCategory(result.getMethod().getGroups());
 		test.log(Status.FAIL, "Test fail");
 		test.log(Status.FAIL, result.getThrowable().getMessage());
-
-		WebDriver driver=WebFactory.getDriver();
 		
-		System.out.println(
-			    "LISTENER DRIVER = " + WebFactory.getDriver() +
-			    " | THREAD = " + Thread.currentThread().getId()
-			);
-	       
-	           File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String Destination=Screenshot.Take_Screenshot(result.getName());
 
-	           LocalDateTime date = LocalDateTime.now();
-	           DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH.mm.ss");
-	           String time = date.format(format) + result.getName();
-	           String destination = System.getProperty("user.dir") + "\\Screenshot\\" + time + ".png";
-
-	           try {
-	               FileHandler.copy(source, new File(destination));
-	               test.addScreenCaptureFromPath(destination);
-	           } catch (IOException e) {
-	               e.printStackTrace();
-	           }
+		 test.addScreenCaptureFromPath(Destination);
 	      
 	}
 

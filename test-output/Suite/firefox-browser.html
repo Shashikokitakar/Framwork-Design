@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>firefox-browser</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/2</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Oct 10 16:57:03 IST 2026</td>
+<td>Started on:</td><td>Sat Oct 10 18:05:36 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>709 seconds (709683 ms)</td>
+<tr><td>Total time:</td><td>884 seconds (884838 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,101 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.framevork_design.test_case.open_url.Setup()'><b>Setup</b><br>Test class: com.framevork_design.test_case.open_url<br>Parameters: firefox</td>
-<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}, error Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:142)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
-	at com.framevork_design.Base.WebFactory.InitializeDriver(WebFactory.java:32)
-	at com.framevork_design.Base.Base_Class.Setup(Base_Class.java:21)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:157)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 25 more
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace234598165", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace234598165'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}, error Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:142)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
-	at com.framevork_design.Base.WebFactory.InitializeDriver(WebFactory.java:32)
-	at com.framevork_design.Base.Base_Class.Setup(Base_Class.java:21)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:157)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 25 more
-</pre></div></td>
-<td>316</td>
-<td>com.framevork_design.test_case.open_url@139982de</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.framevork_design.test_case.open_url.TearDown()'><b>TearDown</b><br>Test class: com.framevork_design.test_case.open_url</td>
-<td></td>
-<td>0</td>
-<td>com.framevork_design.test_case.open_url@139982de</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -181,8 +86,123 @@ Driver info: driver.version: FirefoxDriver
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1572766625", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1572766625'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1813845975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1813845975'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.framevork_design.POM.LogIN.Enter_UserNAme(LogIN.java:39)
+	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>14</td>
+<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: Admin, admin123</td>
+<td></td>
+<td>11</td>
+<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
+<tr>
+<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: aDMiN, Addmin</td>
+<td></td>
+<td>9</td>
+<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
+<tr>
+<td title='com.framevork_design.test_case.open_url.check_url()'><b>check_url</b><br>Test class: com.framevork_design.test_case.open_url</td>
+<td></td>
+<td>0</td>
+<td>com.framevork_design.test_case.open_url@139982de</td></tr>
+<tr>
+<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: admin1, Admin123</td>
+<td></td>
+<td>6</td>
+<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
+<tr>
+<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: Admin, adMIN123</td>
+<td></td>
+<td>6</td>
+<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: null, null</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.framevork_design.POM.LogIN.Enter_UserNAme(LogIN.java:39)
+	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1981680940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1981680940'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.framevork_design.POM.LogIN.Enter_UserNAme(LogIN.java:39)
+	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>1</td>
+<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
+<tr>
+<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: null, null</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.framevork_design.POM.LogIN.Enter_UserNAme(LogIN.java:39)
+	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2114755284", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2114755284'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -206,116 +226,6 @@ Driver info: driver.version: FirefoxDriver
 </pre></div></td>
 <td>2</td>
 <td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: Admin, admin123</td>
-<td></td>
-<td>25</td>
-<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
-<tr>
-<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: aDMiN, Addmin</td>
-<td></td>
-<td>14</td>
-<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
-<tr>
-<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: admin1, Admin123</td>
-<td></td>
-<td>12</td>
-<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
-<tr>
-<td title='com.framevork_design.test_case.logIn.LogIN_Test()'><b>LogIN_Test</b><br>Test class: com.framevork_design.test_case.logIn<br>Parameters: Admin, adMIN123</td>
-<td></td>
-<td>15</td>
-<td>com.framevork_design.test_case.logIn@682b2fa</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.framevork_design.test_case.open_url.check_url()'><b>check_url</b><br>Test class: com.framevork_design.test_case.open_url</td>
-<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}, error Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:142)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
-	at com.framevork_design.Base.WebFactory.InitializeDriver(WebFactory.java:32)
-	at com.framevork_design.Base.Base_Class.Setup(Base_Class.java:21)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:157)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 25 more
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1835981202", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1835981202'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:debuggerAddress: true, moz:firefoxOptions: {}}, error Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:25)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:13)
-	at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:142)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:133)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:128)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:113)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
-	at com.framevork_design.Base.WebFactory.InitializeDriver(WebFactory.java:32)
-	at com.framevork_design.Base.Base_Class.Setup(Base_Class.java:21)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.openqa.selenium.WebDriverException: Command failed with code: 65, executed: [--browser, firefox, --output, json]
-Access is denied. (os error 5)
-Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.12.1&apos;
-Driver info: driver.version: FirefoxDriver
-	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:157)
-	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:299)
-	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:22)
-	... 25 more
-</pre></div></td>
-<td>0</td>
-<td>com.framevork_design.test_case.open_url@139982de</td></tr>
 </table><p>
 </body>
 </html>

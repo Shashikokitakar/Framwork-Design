@@ -17,4 +17,16 @@
       </class> <!-- com.framevork_design.test_case.logIn -->
     </classes>
   </test> <!-- chrome-browser(failed) -->
+  <test thread-count="2" parallel="classes" name="firefox-browser(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.framevork_design.test_case.logIn">
+        <methods>
+          <include name="LogIN_Test" invocation-numbers="0"/>
+          <include name="Setup"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- com.framevork_design.test_case.logIn -->
+    </classes>
+  </test> <!-- firefox-browser(failed) -->
 </suite> <!-- Failed suite [Suite] -->
