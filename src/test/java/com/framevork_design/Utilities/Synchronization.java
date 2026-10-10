@@ -17,7 +17,7 @@ public class Synchronization {
 	{
 		WebDriver driver=WebFactory.getDriver();
 		
-		return new WebDriverWait(driver, Duration.ofSeconds(10));
+		return new WebDriverWait(driver, Duration.ofSeconds(20));
 	}
 
 	public static WebElement VisibilityofElement(WebElement Element)

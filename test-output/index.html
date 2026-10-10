@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,  2 skipped,  5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -109,6 +109,25 @@
                     </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.logIn" class="method navigator-link" hash-for-method="LogIN_Test(null, null)">LogIN_Test(null, null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.logIn" class="method navigator-link" hash-for-method="LogIN_Test(null, null)">LogIN_Test(null, null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
                       <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
@@ -117,12 +136,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.logIn" class="method navigator-link" hash-for-method="LogIN_Test(Admin, admin123)">LogIN_Test(Admin, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.logIn" class="method navigator-link" hash-for-method="LogIN_Test(admin1, Admin123)">LogIN_Test(admin1, Admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.logIn" class="method navigator-link" hash-for-method="LogIN_Test(admin1, Admin123)">LogIN_Test(admin1, Admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.logIn" class="method navigator-link" hash-for-method="LogIN_Test(Admin, admin123)">LogIN_Test(Admin, admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -133,6 +152,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.logIn" class="method navigator-link" hash-for-method="LogIN_Test(aDMiN, Addmin)">LogIN_Test(aDMiN, Addmin)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.framevork_design.test_case.open_url" class="method navigator-link" hash-for-method="check_url">check_url</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -164,14 +188,62 @@
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
 	at com.framevork_design.POM.LogIN.Enter_UserNAme(LogIN.java:39)
-	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames
+	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.framevork_design.test_case.logIn</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LogIN_Test(null, null)">
+                  </a> <!-- LogIN_Test(null, null) -->
+                  <span class="method-name">LogIN_Test</span>
+                  <span class="parameters">(null,null)</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.framevork_design.POM.LogIN.Enter_UserNAme(LogIN.java:39)
+	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LogIN_Test(null, null)">
+                  </a> <!-- LogIN_Test(null, null) -->
+                  <span class="method-name">LogIN_Test</span>
+                  <span class="parameters">(null,null)</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.framevork_design.POM.LogIN.Enter_UserNAme(LogIN.java:39)
+	at com.framevork_design.test_case.logIn.LogIN_Test(logIn.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -180,18 +252,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LogIN_Test(Admin, admin123)">
-                  </a> <!-- LogIN_Test(Admin, admin123) -->
-                  <span class="method-name">LogIN_Test</span>
-                  <span class="parameters">(Admin,admin123)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="LogIN_Test(admin1, Admin123)">
                   </a> <!-- LogIN_Test(admin1, Admin123) -->
                   <span class="method-name">LogIN_Test</span>
                   <span class="parameters">(admin1,Admin123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LogIN_Test(Admin, admin123)">
+                  </a> <!-- LogIN_Test(Admin, admin123) -->
+                  <span class="method-name">LogIN_Test</span>
+                  <span class="parameters">(Admin,admin123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -212,6 +284,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.framevork_design.test_case.open_url</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_url">
+                  </a> <!-- check_url -->
+                  <span class="method-name">check_url</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -221,16 +308,18 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot;&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.framevork_design.Utilities.Annotation_Transformer&quot;/&gt;
     &lt;listener class-name=&quot;com.framevork_design.Utilities.Report_generation&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;cross-browser&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;chrome-browser&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.framevork_design.test_case.open_url&quot;/&gt;
       &lt;class name=&quot;com.framevork_design.test_case.logIn&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- cross-browser --&gt;
+  &lt;/test&gt; &lt;!-- chrome-browser --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -242,7 +331,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">cross-browser (1 class)</span>
+                <span class="test-name">chrome-browser (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -268,32 +357,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LogIN_Test')
 data.setCell(0, 2, 'com.framevork_design.test_case.logIn')
-data.setCell(0, 3, 5733);
+data.setCell(0, 3, 30016);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'LogIN_Test')
 data.setCell(1, 2, 'com.framevork_design.test_case.logIn')
-data.setCell(1, 3, 2938);
+data.setCell(1, 3, 13089);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'LogIN_Test')
 data.setCell(2, 2, 'com.framevork_design.test_case.logIn')
-data.setCell(2, 3, 2504);
+data.setCell(2, 3, 10869);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'LogIN_Test')
 data.setCell(3, 2, 'com.framevork_design.test_case.logIn')
-data.setCell(3, 3, 2398);
+data.setCell(3, 3, 7983);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'LogIN_Test')
 data.setCell(4, 2, 'com.framevork_design.test_case.logIn')
-data.setCell(4, 3, 1413);
+data.setCell(4, 3, 2713);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'LogIN_Test')
+data.setCell(5, 2, 'com.framevork_design.test_case.logIn')
+data.setCell(5, 3, 1146);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'LogIN_Test')
+data.setCell(6, 2, 'com.framevork_design.test_case.logIn')
+data.setCell(6, 3, 671);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'check_url')
+data.setCell(7, 2, 'com.framevork_design.test_case.open_url')
+data.setCell(7, 3, 90);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -319,68 +420,113 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.framevork_design.test_case.logIn</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.framevork_design.test_case.open_url</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">Setup(chrome)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.framevork_design.test_case.logIn</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">Setup(chrome)</span>
+                <span class="method-start">1716 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LogIN_Test(null, null)</span>
+                <span class="method-start">33770 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.framevork_design.test_case.open_url</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">check_url</span>
+                <span class="method-start">33770 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">33910 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.framevork_design.test_case.logIn</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">34932 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Setup(chrome)</span>
+                <span class="method-start">35347 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LogIN_Test(null, null)</span>
+                <span class="method-start">44751 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">47480 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Setup(chrome)</span>
+                <span class="method-start">51017 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">LogIN_Test(null, null)</span>
-                <span class="method-start">15166 ms</span>
+                <span class="method-start">67597 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">17026 ms</span>
+                <span class="method-start">68470 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup(chrome)</span>
-                <span class="method-start">17844 ms</span>
+                <span class="method-start">68752 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LogIN_Test(admin1, Admin123)</span>
-                <span class="method-start">26004 ms</span>
+                <span class="method-start">75484 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">28525 ms</span>
+                <span class="method-start">88600 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup(chrome)</span>
-                <span class="method-start">29208 ms</span>
+                <span class="method-start">90092 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LogIN_Test(Admin, adMIN123)</span>
-                <span class="method-start">38797 ms</span>
+                <span class="method-start">140484 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">41743 ms</span>
+                <span class="method-start">170583 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup(chrome)</span>
-                <span class="method-start">42321 ms</span>
+                <span class="method-start">174201 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LogIN_Test(aDMiN, Addmin)</span>
-                <span class="method-start">60555 ms</span>
+                <span class="method-start">211642 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">66296 ms</span>
+                <span class="method-start">222527 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">Setup(chrome)</span>
-                <span class="method-start">66965 ms</span>
+                <span class="method-start">223021 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LogIN_Test(Admin, admin123)</span>
-                <span class="method-start">74799 ms</span>
+                <span class="method-start">240727 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">77222 ms</span>
+                <span class="method-start">248720 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
