@@ -7,63 +7,49 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '20'))
     }
 
-    parameters {
-        choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'edge'], description: 'Browser to run tests on')
-        booleanParam(name: 'HEADLESS', defaultValue: true, description: 'Run browser in headless mode')
-        string(name: 'TEST_SUITE', defaultValue: 'testng.xml', description: 'Suite file to run')
+    environment {
+        // Change these to your team's email addresses (comma separated)
+        TEAM_EMAILS = 'teammate1@company.com, teammate2@company.com'
     }
-
-    // Uncomment if you configured Maven/JDK under Manage Jenkins > Tools
-    // tools {
-    //     maven 'Maven3'
-    //     jdk 'JDK21'
-    // }
 
     stages {
         stage('Checkout') {
             steps {
-                // For a Pipeline-from-SCM job this is automatic; keep for clarity
                 checkout scm
             }
         }
 
-        stage('Verify Tools') {
+        stage('Run Cross-Browser Tests') {
             steps {
-                bat 'java -version'
-                bat 'mvn -version'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                bat 'mvn clean compile -DskipTests'
-            }
-        }
-
-        stage('Run Automation Tests') {
-            steps {
-                bat "mvn test -Dbrowser=${params.BROWSER} -Dheadless=${params.HEADLESS} -Dsurefire.suiteXmlFiles=${params.TEST_SUITE}"
+                // Browsers are defined in testng.xml
+                bat 'mvn clean test -Dsurefire.suiteXmlFiles=testng.xml'
             }
         }
     }
 
     post {
         always {
-            // Test results (works for JUnit and TestNG surefire output)
-            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
+            // Extent Report: viewable from the job page in Jenkins
+            publishHTML(target: [
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'report',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent Report'
+            ])
 
-            // Screenshots, logs, HTML reports
-            archiveArtifacts artifacts: 'target/**/*.html, target/screenshots/**, target/*.log', allowEmptyArchive: true
-        }
-        success {
-            echo 'All tests passed.'
-        }
-        failure {
-            echo 'Tests failed - check the Test Result and archived artifacts.'
-            // mail to: 'team@example.com', subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}", body: "${env.BUILD_URL}"
-        }
-        cleanup {
-            cleanWs()
+            // Email only the Extent report
+            emailext(
+                to: "${env.TEAM_EMAILS}",
+                subject: "${currentBuild.currentResult}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                mimeType: 'text/html',
+                body: """
+                    <p>Automation run finished with status: <b>${currentBuild.currentResult}</b></p>
+                    <p>The Extent report is attached. Open it in a browser.</p>
+                """,
+                attachmentsPattern: 'report/ExtentReport.html'
+            )
         }
     }
 }
