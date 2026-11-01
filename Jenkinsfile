@@ -9,7 +9,7 @@ pipeline {
 
     environment {
         // Change these to your team's email addresses (comma separated)
-        TEAM_EMAILS = 'teammate1@company.com, teammate2@company.com'
+        TEAM_EMAILS = 'shashikokitakar2606@gmail.com, shashikokitakar95v2@gmail.com'
     }
 
     stages {
