@@ -19,6 +19,13 @@ pipeline {
             }
         }
 
+        stage('Clean Old Reports') {
+            steps {
+                // Make sure an old report from Git or a previous run is never sent
+                bat 'if exist report rmdir /s /q report'
+            }
+        }
+
         stage('Run Cross-Browser Tests') {
             steps {
                 // Browsers are defined in testng.xml
@@ -29,17 +36,7 @@ pipeline {
 
     post {
         always {
-            // Extent Report: viewable from the job page in Jenkins
-            publishHTML(target: [
-                allowMissing: true,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'report',
-                reportFiles: 'ExtentReport.html',
-                reportName: 'Extent Report'
-            ])
-
-            // Email only the Extent report
+            // 1. Email first, so a problem in a later step can never block it
             emailext(
                 to: "${env.TEAM_EMAILS}",
                 subject: "${currentBuild.currentResult}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
@@ -50,6 +47,19 @@ pipeline {
                 """,
                 attachmentsPattern: 'report/ExtentReport.html'
             )
+
+            // 2. Extent Report link on the job page (needs the HTML Publisher plugin)
+            publishHTML(target: [
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'report',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent Report'
+            ])
+
+            // 3. Keep the report downloadable from the build page
+            archiveArtifacts artifacts: 'report/**', allowEmptyArchive: true
         }
     }
 }
